@@ -1,0 +1,423 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.navigationIMG {
+    padding-top: 40px; padding-left: 163px; padding-bottom: 40px; padding-right: 250px; float: left;
+}
+
+.navigationTEXT {
+    padding: 62px 52px 62px 52px; float: left; font-size: 20px; color: gray;
+}
+
+.navigationTEXT a {
+    color: gray;
+    text-decoration: none;
+}
+
+.end {
+    margin-right: 144px;
+}
+
+.home {
+    display: inline-block;
+    width: 100%;
+    height: 750px;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(https://physicsworld.com/wp-content/uploads/2022/08/Atlas-V-rocket.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    letter-spacing: 1.75px;
+    color: white;
+    text-align: center;
+}
+
+.home #div1 {
+    font-size: 60px;
+    margin: 200px 693px 0px 0px;
+}
+
+.home #div2 {
+    font-size: 60px;
+    margin: 0px 803px 0px 0px;
+}
+
+.home #div3 {
+    margin: 30px 343px 0px 0px;
+    font-size: 30px;
+}
+
+#button {
+    height: auto;
+    width: 128px;
+    margin: 50px 978px 0px 0px;
+    padding: 15px 30px 15px 30px;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: white;
+    letter-spacing: 1.75px;
+    display: inline-block;
+}
+
+#button {
+    color: black;
+    text-decoration: none;
+}
+
+#button:hover {
+    background-color: rgb(240, 240, 255);
+    transition: background-color .2s;
+}
+
+.body {
+    padding: 100px 342px;
+    font-size: 32px;
+}
+
+.grid1 .div1 {
+    display: inline-block;
+    border: 1px solid rgb(214, 214, 214);
+    width: auto;
+    height: 620px;
+}
+
+.grid1 .div2 {
+    display: inline-block;
+    border: 1px solid rgb(214, 214, 214);
+    width: auto;
+    height: 620px;
+}
+
+.grid1 .text {
+    text-align: center;
+}
+
+.grid1 .text1 {
+    font-size: 22px;
+    font-weight: bolder;
+    padding-top: 45px;
+}
+
+.grid1 .text2 {
+    font-size: 22px;
+    padding-top: 20px;
+}
+
+.grid1 .text3 {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 24px;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 40px;
+    margin: 0px 158px;
+}
+
+.grid1 a {
+    text-decoration: none;
+    color: rgb(53, 56, 255);
+    letter-spacing: 2px;
+}
+
+.flex1 .div1 img {
+    width: 750px;
+    display: inline-block;
+}
+
+.flex1 .div2 {
+    display: inline-block;
+    background-image: url(https://images.unsplash.com/photo-1650406268594-c5d310f6fbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=527&q=80);
+    background-blend-mode: darken;
+    background-color: rgba(39, 39, 39, 0.6);
+    color: white;
+    height: fit-content;
+    width: 560px;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    top: 80px;
+    right: 170px;
+}
+
+.flex1 {
+    display: flex;
+    align-items: end;
+    margin: 120px 0px 200px 158px;
+}
+
+.flex1 .div2 .text1 {
+    font-size:32px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.flex1 .div2 .text2 {
+    font-size: 20px;
+}
+
+.flex1 .div2 .button {
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 15px 55px;
+    background-color: white;
+    font-weight: bolder;
+    width: fit-content;
+}
+
+.flex1 .div2 .button a {
+    color: black;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+}
+
+.flex2 .div1 img {
+    width: 750px;
+    display: inline-block;
+}
+
+.flex2 .div2 {
+    display: inline-block;
+    background-image: url(https://images.unsplash.com/photo-1650406268594-c5d310f6fbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=527&q=80);
+    background-blend-mode: darken;
+    background-color: rgba(39, 39, 39, 0.6);
+    color: white;
+    height: fit-content;
+    width: 560px;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    top: 80px;
+    left: 170px;
+}
+
+.flex2 {
+    display: flex;
+    align-items: end;
+    flex-direction: row-reverse;
+    margin: 120px 158px 200px 0px
+}
+
+.flex2 .div2 .text1 {
+    font-size:32px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.flex2 .div2 .text2 {
+    font-size: 20px;
+}
+
+.flex2 .div2 .button {
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 15px 55px;
+    background-color: white;
+    font-weight: bolder;
+    width: fit-content;
+}
+
+.flex2 .div2 .button a {
+    color: black;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+}
+
+.flex3 .div1 img {
+    width: 750px;
+    display: inline-block;
+}
+
+.flex3 .div2 {
+    display: inline-block;
+    background-image: url(https://images.unsplash.com/photo-1650406268594-c5d310f6fbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=527&q=80);
+    background-blend-mode: darken;
+    background-color: rgba(39, 39, 39, 0.6);
+    color: white;
+    height: fit-content;
+    width: 560px;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    top: 80px;
+    right: 170px;
+}
+
+.flex3 {
+    display: flex;
+    margin: 120px 0px 200px 158px;
+    align-items: end;
+}
+
+.flex3 .div2 .text1 {
+    font-size:32px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.flex3 .div2 .text2 {
+    font-size: 20px;
+}
+
+.flex3 .div2 .button {
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 15px 55px;
+    background-color: white;
+    font-weight: bolder;
+    width: fit-content;
+}
+
+.flex3 .div2 .button a {
+    color: black;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+}
+
+.underbody .text1 {
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.underbody .button {
+    background-color: rgb(103, 21, 255);
+    padding: 15px 55px;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.underbody .button a {
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.underbody .text2 {
+    text-align: center;
+    font-size: 32px;
+    padding: 150px 350px 0px 350px;
+}
+
+.underbody .text3 {
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 20px 0px;
+}
+
+.underbody2 {
+    background-color: rgb(155, 5, 255);
+    padding: 80px 800px 80px 340px;
+    color: white;
+    margin-top: 150px;
+    position: relative;
+    width: 100%;
+    place-content: center;
+}
+
+.underbody2 .text1 {
+    font-size: 40px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.underbody2 .text2 {
+    font-size: 24px;
+}
+
+.underbody2 .button {
+    background-color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    width: fit-content;
+    position: absolute;
+    bottom: 130px;
+    right: 340px;
+}
+
+.underbody2 .button a {
+    color: rgb(143, 57, 255);
+    text-decoration: none;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 210px 210px 210px 210px;
+    grid-template-rows: 50px 50px 50px 50px;
+    padding: 80px 0px 80px 0px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    column-gap: 110px;
+    row-gap: 0px;
+    width: 100%;
+    place-content: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.footer .row1 {
+    color: rgb(156, 156, 156);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.footer .twitter {
+    display: inline-block;
+    height: auto;
+    width: auto;
+}
+
+.footer .youtube {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding-left: 10px;
+}
+
+.footer .col1 {
+    font-size: 22px;
+}
+
+.footer .trademark {
+    color: rgb(156, 156, 156);
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.footer .col2row3 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.footer .col2row3 {
+    padding-top: 25px;
+}

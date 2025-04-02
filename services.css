@@ -1,0 +1,235 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.navigationIMG {
+    padding-top: 40px; padding-left: 163px; padding-bottom: 40px; padding-right: 250px; float: left;
+}
+
+.navigationTEXT {
+    padding: 62px 52px 62px 52px; float: left; font-size: 20px; color: gray;
+}
+
+.navigationTEXT a {
+    color: gray;
+    text-decoration: none;
+}
+
+.end {
+    margin-right: 144px;
+}
+
+.body {
+    padding: 80px 158px;
+    font-size: 32px;
+}
+
+.body .text1 {
+    font-family: proxima-nova,sans-serif;
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+.body .text2 {
+    font-size: 24px;
+    padding-top: 30px;
+}
+
+.grid1 {
+    display: block;
+}
+
+.grid1 .div1 {
+    display: inline-block;
+    border: 1px solid rgb(214, 214, 214);
+    width: auto;
+    height: 620px;
+}
+
+.grid1 .div2 {
+    display: inline-block;
+    border: 1px solid rgb(214, 214, 214);
+    width: auto;
+    height: 620px;
+}
+
+.grid1 .div3 {
+    display: inline-block;
+    border: 1px solid rgb(214, 214, 214);
+    width: auto;
+    height: 620px;
+}
+
+.grid1 .text {
+    text-align: center;
+}
+
+.grid1 .text1 {
+    font-size: 22px;
+    font-weight: bolder;
+    padding-top: 45px;
+}
+
+.grid1 .text2 {
+    font-size: 20px;
+    padding: 20px 50px 0px 50px;
+}
+
+.grid1 .text3 {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 24px;
+    color: rgb(53, 56, 255);
+    letter-spacing: 2px;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 40px;
+    grid-template-rows: auto auto;
+    grid-row-gap: 40px;
+    margin: 0px 158px;
+}
+
+.grid1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.underbody .text1 {
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.underbody .button {
+    background-color: rgb(103, 21, 255);
+    padding: 15px 55px;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.underbody .button a {
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.underbody .text2 {
+    text-align: center;
+    font-size: 32px;
+    padding: 150px 350px 0px 350px;
+}
+
+.underbody .text3 {
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 20px 0px;
+}
+
+.underbody2 {
+    background-color: rgb(155, 5, 255);
+    padding: 80px 550px 80px 150px;
+    color: white;
+    margin-top: 150px;
+    position: relative;
+}
+
+.underbody2 .text1 {
+    font-size: 40px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.underbody2 .text2 {
+    font-size: 24px;
+}
+
+.underbody2 .button {
+    background-color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    width: fit-content;
+    position: absolute;
+    bottom: 130px;
+    right: 180px;
+}
+
+.underbody2 .button a {
+    color: rgb(143, 57, 255);
+    text-decoration: none;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 210px 210px 210px 210px;
+    grid-template-rows: 50px 50px 50px 50px;
+    padding: 80px 550px 80px 150px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    column-gap: 110px;
+    row-gap: 0px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.footer .row1 {
+    color: rgb(156, 156, 156);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.footer .twitter {
+    display: inline-block;
+    height: auto;
+    width: auto;
+}
+
+.footer .youtube {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding-left: 10px;
+}
+
+.footer .col1 {
+    font-size: 22px;
+}
+
+.footer .trademark {
+    color: rgb(156, 156, 156);
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.footer .col2row3 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.footer .col2row3 {
+    padding-top: 25px;
+}
