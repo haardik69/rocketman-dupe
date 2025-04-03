@@ -31,9 +31,9 @@ body {
 }
 
 .flex1 {
-    padding: 80px 158px;
+    padding: 80px 158px 80px 350px;
     display: flex;
-    width: 50%;
+    width: 40%;
     flex-wrap: wrap;
 }
 
@@ -53,38 +53,47 @@ body {
 }
 
 .flex2 {
-    width: 50%;
+    width: 60%;
     height: auto;
     display: flex;
 }
 
-.flex2 form {
-    margin-left: 158px;
+form {
+    margin: 200px 0px;
+    width: 450px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.flex2 label {
+label {
+    font-weight: bold;
     display: block;
-    margin-bottom: 8px;
+    margin-top: 10px;
 }
 
-.flex2 input, textarea {
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
     width: 100%;
     padding: 10px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-}
-
-.flex2 button {
-    background-color: rgb(155, 5, 255);
+    background-color: #007bff;
     color: white;
-    padding: 10px 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    margin-top: 15px;
     cursor: pointer;
 }
 
-.flex2 button:hover {
-    background-color: rgb(68, 0, 114);
+button:hover {
+    background-color: #0056b3;
 }
 
 .underbody .text1 {
@@ -125,10 +134,12 @@ body {
 
 .underbody2 {
     background-color: rgb(155, 5, 255);
-    padding: 80px 550px 80px 150px;
+    padding: 80px 800px 80px 340px;
     color: white;
     margin-top: 150px;
     position: relative;
+    width: 100%;
+    place-content: center;
 }
 
 .underbody2 .text1 {
@@ -162,7 +173,7 @@ body {
     display: grid;
     grid-template-columns: 210px 210px 210px 210px;
     grid-template-rows: 50px 50px 50px 50px;
-    padding: 80px 550px 80px 150px;
+    padding: 80px 0px 80px 0px;
     background-color: rgb(0, 0, 0);
     color: white;
     font-weight: bold;
@@ -170,6 +181,8 @@ body {
     line-height: 25px;
     column-gap: 110px;
     row-gap: 0px;
+    width: 100%;
+    place-content: center;
 }
 
 .footer a {

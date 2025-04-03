@@ -29,6 +29,7 @@ body {
 .body {
     padding: 80px 158px;
     font-size: 32px;
+    margin-right: 840px;
 }
 
 .body .text1 {
@@ -49,21 +50,21 @@ body {
 .grid1 .div1 {
     display: inline-block;
     border: 1px solid rgb(214, 214, 214);
-    width: auto;
+    width: min-content;
     height: 620px;
 }
 
 .grid1 .div2 {
     display: inline-block;
     border: 1px solid rgb(214, 214, 214);
-    width: auto;
+    width: min-content;
     height: 620px;
 }
 
 .grid1 .div3 {
     display: inline-block;
     border: 1px solid rgb(214, 214, 214);
-    width: auto;
+    width: min-content;
     height: 620px;
 }
 
@@ -142,10 +143,12 @@ body {
 
 .underbody2 {
     background-color: rgb(155, 5, 255);
-    padding: 80px 550px 80px 150px;
+    padding: 80px 800px 80px 340px;
     color: white;
     margin-top: 150px;
     position: relative;
+    width: 100%;
+    place-content: center;
 }
 
 .underbody2 .text1 {
@@ -179,7 +182,7 @@ body {
     display: grid;
     grid-template-columns: 210px 210px 210px 210px;
     grid-template-rows: 50px 50px 50px 50px;
-    padding: 80px 550px 80px 150px;
+    padding: 80px 0px 80px 0px;
     background-color: rgb(0, 0, 0);
     color: white;
     font-weight: bold;
@@ -187,6 +190,8 @@ body {
     line-height: 25px;
     column-gap: 110px;
     row-gap: 0px;
+    width: 100%;
+    place-content: center;
 }
 
 .footer a {
