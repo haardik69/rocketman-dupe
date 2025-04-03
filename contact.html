@@ -55,7 +55,7 @@
         </div>
 
         <div class="flex2">
-            <form action="http://localhost/myprojects/submit_contact_form.php" method="post">
+            <form id="contact-form">
                 <label for="name">Your Name (required)</label>
                 <input type="text" id="name" name="name" required>
             
@@ -69,7 +69,29 @@
                 <textarea id="message" name="message" rows="4" required></textarea>
             
                 <button type="submit">Submit</button>
-            </form>
+            </form> 
+            
+            <script>
+                document.getElementById("contact-form").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                
+                    const formData = {
+                        name: document.getElementById("name").value,
+                        company: document.getElementById("company").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value
+                    };
+                
+                    fetch("http://127.0.0.1:5000/send-email", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(formData)
+                    })
+                    .then(response => response.json())
+                    .then(data => alert(data.message))
+                    .catch(error => console.error("Error:", error));
+                });
+            </script>
         </div>
     </div>
 
@@ -79,7 +101,7 @@
                 We'll take good care of your rocket.
             </div>
             <div class="text2 text">
-                We'll treat your rocket as if it’s our own. Our standards are higher than the ISS's altitude. We also enjoy test driving your rocket before giving it back 😱
+                We'll treat your rocket as if it's our own. Our standards are higher than the ISS's altitude. We also enjoy test driving your rocket before giving it back 😱
             </div>
             <div class="button">
                 <a href="contact.html">
