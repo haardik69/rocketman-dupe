@@ -2,6 +2,17 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     margin: 0px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .center {
@@ -31,7 +42,7 @@ body {
 }
 
 .flex1 {
-    padding: 80px 158px 80px 350px;
+    padding: 80px 110px 80px 350px;
     display: flex;
     width: 40%;
     flex-wrap: wrap;
@@ -46,6 +57,7 @@ body {
 .flex1 .text2 {
     font-size: 24px;
     padding-top: 30px;
+    line-height: 35px;
 }
 
 .flex1 .text2 a {
@@ -59,26 +71,56 @@ body {
 }
 
 form {
-    margin: 200px 0px;
+    margin: 150px 0px;
     width: 450px;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: x-large;
 }
 
 label {
     font-weight: bold;
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
+}
+
+label::after {
+    content: " *";
+    color: red;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    font-style: italic;
+    transition: color 0.15s ease-in-out;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: rgba(0, 0, 0, 0.15);
 }
 
 input, textarea {
+    font-family: 'Quicksand', sans-serif;
     width: 100%;
+    box-sizing: border-box;
     padding: 8px;
-    margin-top: 5px;
+    margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 275px;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 10px #007bff;
 }
 
 button {
@@ -89,11 +131,116 @@ button {
     border: none;
     border-radius: 5px;
     margin-top: 15px;
+    height: 40px;
+    min-width: 100px;
+    overflow: hidden;
     cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+button.loading {
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+    animation: glow 1.2s infinite alternate;
+}
+
+#submitBtn.loading {
+    pointer-events: none;
+    background-color: #005cbe !important;
+    color: white !important;
+}
+
+#submitBtn.loading:hover {
+    background-color: #0056b3 !important;
+}
+
+#submitText.loading::after {
+    content: "...";
+    display: inline-block;
+    animation: dots 1.2s steps(3, end) infinite;
+}
+
+.loading {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 
+                 0 0 8px rgba(255, 255, 255, 0.3), 
+                 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes dots {
+    0% { content: "."; }
+    33% { content: ".."; }
+    66% { content: "..."; }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); }
+    100% { box-shadow: 0 0 20px rgba(0, 123, 255, 0.9); }
+}
+
+#popupOverlay, #popupOverlayFail {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#popupBox {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.15s ease-in-out;
+}
+
+#closePopup, #retryPopup, #closeFailPopup {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#closePopup:hover, #retryPopup:hover, #closeFailPopup:hover {
+    background: #0056b3;
+}
+
+#popupOverlay.show, #popupOverlayFail.show {
+    display: flex;
+    opacity: 1;
+}
+
+#popupOverlay.show #popupBox, #popupOverlayFail.show #popupBox {
+    transform: scale(1);
+}
+
+#popupOverlay:not(.show), #popupOverlayFail:not(.show) {
+    display: none;
+}
+
+.popup-content {
+    padding: 20px 40px;
+    font-size: 22px;
+}
+
+.popup-img {
+    width: 200px;
 }
 
 .underbody .text1 {

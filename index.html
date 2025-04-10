@@ -16,6 +16,17 @@
 
 </head>
 <body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("loaded");
+        });
+        
+        function smoothReload() {
+            document.body.classList.add("fade-out");
+            setTimeout(() => location.reload(), 500);
+        }
+    </script>
+    
     <div class="center">
         <div class="navigationIMG">
             <a href="index.html">
