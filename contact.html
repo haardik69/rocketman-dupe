@@ -16,6 +16,40 @@
 
 </head>
 <body>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+    let iapToken = "";
+
+    function getIapToken(callback) {
+        const client = google.accounts.oauth2.initTokenClient({
+        client_id: "536964574187-51j77krhjata7cbl8l23d9cb0hqtbnr4.apps.googleusercontent.com",
+        scope: "",
+        callback: (tokenResponse) => {
+            iapToken = tokenResponse.access_token;
+            callback();
+        },
+        });
+        client.requestAccessToken();
+    }
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        getIapToken(() => {
+        const formData = {};
+        fetch("https://rocketman-contact-form-536964574187.asia-south1.run.app//send-email", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + iapToken
+            },
+            body: JSON.stringify(formData)
+        })
+        .then()
+        .catch();
+        });
+    });
+    </script>
+
     <div class="center">
         <div class="navigationIMG">
             <a href="index.html">

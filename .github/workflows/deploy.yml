@@ -1,0 +1,24 @@
+name: Deploy Frontend to Google Cloud Storage
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Google Cloud CLI
+      uses: google-github-actions/setup-gcloud@v0
+      with:
+        project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
+        credentials: ${{ secrets.GCLOUD_SA_KEY }}
+
+    - name: Deploy to Google Cloud Storage
+      run: |
+        gsutil -m rsync -r ./ gs://[YOUR_BUCKET_NAME]
