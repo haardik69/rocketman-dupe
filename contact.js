@@ -17,7 +17,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     submitText.textContent = "Submitting";
     submitText.classList.add("loading");
 
-    submitText.style.display = "hidden"
+    submitText.style.display = "none";
 
     const formData = {
         name: document.getElementById("name").value,
@@ -26,7 +26,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         message: document.getElementById("message").value
     };
 
-    fetch("https://contact-form-backend-jpmqv6igja-el.a.run.app/send-email", {
+    fetch("https://rocketman-contact-form-536964574187.asia-south1.run.app/send-email", {
     //fetch("http://localhost:8080/send-email", {
     //fetch("http://127.0.0.1:8080/send-email", {
     method: "POST",
