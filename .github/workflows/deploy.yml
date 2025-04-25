@@ -5,7 +5,7 @@ on:
     branches:
       - main 
     paths:
-      - '..\..\^_^\rocketman-dupe-backend'
+      - 'C:/Users/HARDiK/OneDrive/Work/^_^/rocketman-dupe-backend'
       - '.github/workflows/deploy.yml'
 
 jobs:
