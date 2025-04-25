@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main 
+    paths:
+      - '../../^_^/rocketman-dupe-backend'
+      - '.github/workflows/deploy.yml'
 
 jobs:
   deploy:
