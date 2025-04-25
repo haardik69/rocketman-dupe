@@ -5,8 +5,7 @@ on:
     branches:
       - main 
     paths:
-      - '../../^_^/rocketman-dupe-backend'
-      - '.github/workflows/deploy.yml'
+      - '..\..\^_^\rocketman-dupe-backend'
 
 jobs:
   deploy:
