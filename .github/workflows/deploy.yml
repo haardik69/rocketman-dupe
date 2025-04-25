@@ -19,6 +19,12 @@ jobs:
         project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
         credentials: ${{ secrets.GCLOUD_SA_KEY }}
 
+    - name: Authenticate with Google Cloud
+      run: |
+        echo "${{ secrets.GCP_SA_KEY }}" > key.json
+        gcloud auth activate-service-account --key-file=key.json
+        gcloud config set project rocketman-contact-form
+
     - name: Deploy to Google Cloud Storage
       run: |
-        gsutil -m rsync -r ./ gs://rocketman-contact-form
+        gsutil -m rsync -r ./ gs://${{ secrets.BUCKET_NAME }}/
