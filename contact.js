@@ -17,7 +17,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     submitText.textContent = "Submitting";
     submitText.classList.add("loading");
 
-    submitText.style.display = "hidden";
+    submitText.style.display = "inline";
 
     const formData = {
         name: document.getElementById("name").value,
