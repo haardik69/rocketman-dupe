@@ -164,51 +164,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script>
-    let iapToken = "";
-
-    const iapClient = google.accounts.oauth2.initTokenClient({
-        client_id: "536964574187-51j77krhjata7cbl8l23d9cb0hqtbnr4.apps.googleusercontent.com",
-        scope: "",
-        callback: (resp) => {
-        iapToken = resp.access_token;
-        document.getElementById("contact-form").dispatchEvent(new Event("iap_ready"));
-        }
-    });
-
-    document.getElementById("contact-form")
-        .addEventListener("submit", function(e) {
-        e.preventDefault();
-        iapClient.requestAccessToken();
-        });
-
-    document.getElementById("contact-form")
-        .addEventListener("iap_ready", function() {
-        const form = this;
-        const data = {
-            name:    form.name.value,
-            company: form.company.value,
-            email:   form.email.value,
-            message: form.message.value
-        };
-
-        fetch("https://rocketman-contact-form-536964574187.asia-south1.run.app/send-email", {
-            method: "POST",
-            headers: {
-            "Content-Type":  "application/json",
-            "Authorization": "Bearer " + iapToken
-            },
-            body: JSON.stringify(data)
-        })
-        .then(r => r.json())
-        .then(resp => {
-            if (resp.status === "success") showPopup("success");
-            else                       showPopup("fail");
-        })
-        .catch(() => showPopup("fail"));
-        });
-    </script>
     <script src="contact.js"></script>
 </body>
