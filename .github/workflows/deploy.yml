@@ -21,4 +21,4 @@ jobs:
 
     - name: Deploy to Google Cloud Storage
       run: |
-        gsutil -m rsync -r ./ gs://[YOUR_BUCKET_NAME]
+        gsutil -m rsync -r ./ gs://rocketman-contact-form
